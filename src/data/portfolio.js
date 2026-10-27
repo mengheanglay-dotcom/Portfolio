@@ -6,9 +6,9 @@ export const profile = {
  // <- e.g. "https://facebook.com/yourname"
   photo: "/heang.jpg", // <- e.g. "/photo.jpg" (put the file in the /public folder)
   github: "https://github.com/mengheanglay-dotcom", // e.g. "https://github.com/yourname"
-  linkedin: "https://linkedin.com/in/mengheanglay", // e.g. "https://linkedin.com/in/yourname"
+  linkedin: "https://linkedin.com/in/LayMengheang", // e.g. "https://linkedin.com/in/yourname"
   facebook: "https://facebook.com/mengheanglay", // e.g. "https://facebook.com/yourname"
-  telegram: "https://t.me/mengheanglay", // e.g. "https://t.me/yourusername"
+  telegram: "https://t.me/Lay_Mengheang", // e.g. "https://t.me/yourusername"
 };
 
 export const focus = [

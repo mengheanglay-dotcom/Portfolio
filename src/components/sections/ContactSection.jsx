@@ -29,6 +29,7 @@ export default function ContactSection() {
     <div className="cta" id="contact">
       <h2>Let’s build something together.</h2>
       <p>Feel free to reach out if you have any questions or opportunities to collaborate.</p>
+      <p>{profile.text}</p>
       <Pill blue href={"mailto:" + profile.text}>
         {profile.text || "Get in touch"}
       </Pill>
