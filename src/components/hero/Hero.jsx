@@ -11,11 +11,11 @@ export default function Hero() {
       </h1>
       <Portrait />
       <div className="side l">
-        <h3>Clean code. Clear interfaces.</h3>
+        <h3>What I Do</h3>
         <p>I build web apps with React, Angular and Laravel.</p>
       </div>
       <div className="side r">
-        <h3>Open to an internship.</h3>
+  
         <p>
           Eager to learn from experienced developers and ship real projects.
         </p>

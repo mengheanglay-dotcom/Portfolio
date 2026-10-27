@@ -1,18 +1,22 @@
 // Edit everything about your portfolio here.
 export const profile = {
   name: "Lay Mengheang",
-  role: "Web Developer Intern",
-  email: "your@email.com", // <- put your real email
-  photo: "/cheata.JPG", // <- e.g. "/photo.jpg" (put the file in the /public folder)
+  role: "Web Developer",
+  text: "Contact me to get in touch", // <- put your real email
+ // <- e.g. "https://facebook.com/yourname"
+  photo: "/heang.jpg", // <- e.g. "/photo.jpg" (put the file in the /public folder)
   github: "https://github.com/mengheanglay-dotcom", // e.g. "https://github.com/yourname"
-  linkedin: "", // e.g. "https://linkedin.com/in/yourname"
+  linkedin: "https://linkedin.com/in/mengheanglay", // e.g. "https://linkedin.com/in/yourname"
+  facebook: "https://facebook.com/mengheanglay", // e.g. "https://facebook.com/yourname"
+  telegram: "https://t.me/mengheanglay", // e.g. "https://t.me/yourusername"
 };
 
 export const focus = [
-  ["Frontend", "React, Angular, Tailwind"],
-  ["Backend", "Laravel, Node.js, Python"],
+  ["Frontend", "React, Angular, Tailwind, Bootstrap"],
+  ["Backend", "Laravel(MVC), Node.js(Express), Python(django)"],
   ["Databases", "MySQL, MongoDB, PostgreSQL"],
-  ["System analysis", "DFD & workflows"],
+  ["System analysis", "DFD & ERD, Workflows"],
+
 ];
 
 export const skills = [
@@ -21,7 +25,11 @@ export const skills = [
     ["React.js", "Angular", "HTML", "CSS", "Bootstrap", "Tailwind CSS"],
   ],
   ["Backend", ["Laravel", "Node.js", "Express.js", "Python"]],
-  ["Databases", ["MySQL", "MongoDB", "PostgreSQL"]],
+  ["Architecture", ["MVC", "REST API", "CRUD", "OOP", "Design Patterns"]],
+  ["Databases", ["MySQL", "MongoDB", "Oracle","dbForge Studio for MySQL", "PostgreSQL", "DataGrip"]],
+
+  ["System Analysis", [ "Requirements gathering","DFD", "ERD", "Workflow"]],
+
   [
     "Tools & concepts",
     [
@@ -34,7 +42,8 @@ export const skills = [
       "JSON",
       "AJAX",
       "CRUD",
-      "DFD",
+      
+
     ],
   ],
 ];
@@ -95,11 +104,66 @@ export const languages = [
 
 // Add certificates here. Put certificate images in the public folder.
 export const certificates = [
-  // {
-  //   title: "Certificate title",
-  //   issuer: "Organization name",
-  //   date: "Month 2026",
-  //   image: "/certificates/certificate-name.jpg",
-  //   url: "",
-  // },
+  //English language certificates with category: "English".
+  {
+    category: "English",
+    title: "ACE English Language Program",
+    issuer: "Organization name",
+    date: "2022 – 2024",
+    image: "/certificates/ace.jpg",
+    url: "",
+  },
+
+  //Chinese language certificates with category: "Chinese".
+  {
+    category: "Chinese",
+    title: "CamASEAN Chinese Language Program",
+    issuer: "Organization name",
+    date: "2023 – 2025",
+    image: "/certificates/camasean.jpg",
+    url: "",
+  },
+  {
+    category: "Chinese",
+    title: "CamASEAN Chinese Language Program",
+    issuer: "HSK2",
+    date: "2023 – 2025",
+    image: "/certificates/hsk2.jpg",
+    url: "",
+  },
+  {
+    category: "Chinese",
+    title: "CamASEAN Chinese Language Program",
+    issuer: "HSK4",
+    date: "2023 – 2025",
+    image: "/certificates/hsk4.jpg",
+    url: "",
+  },
+  // Add short-course certificates with category: "Short Course".
+  {
+    category: "Short Course",
+    title: "ETEC CENTER",
+    issuer: "Frontend Development",
+    date: "2026 – present",
+    image: "/certificates/frontend.jpg",
+    url: "",
+  },
+  {
+    category: "Short Course",
+    title: "Short Course: Web Development",
+    issuer: "Backend Development",
+    date: "2026 – present",
+    image: "/certificates/backend.jpg",
+    url: "",
+  },
+
+  // Add internship certificates with category: "Internship Certificate".
+  {
+    category: "Internship Certificate",
+    title: "Intership Frontend Development",
+    issuer: "Intership",
+    date: "2026 – present",
+    image: "/certificates/internship_frontend.jpg",
+    url: "",
+  },
 ];

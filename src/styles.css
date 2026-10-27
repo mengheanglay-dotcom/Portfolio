@@ -160,8 +160,8 @@ nav .links a:hover {
   left: 50%;
   bottom: 0;
   transform: translateX(-50%);
-  width: min(380px, 62vw);
-  height: min(560px, 80vw);
+  width: min(430px, 68vw);
+  height: min(620px, 86vw);
   cursor: pointer;
   border: 0;
   background: none;
@@ -171,7 +171,7 @@ nav .links a:hover {
 .me .frame {
   position: absolute;
   inset: 0;
-  border-radius: 200px 200px 0 0;
+  border-radius: 220px 220px 0 0;
   background: linear-gradient(
     180deg,
     rgba(89, 160, 255, 0.28),
@@ -180,6 +180,17 @@ nav .links a:hover {
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-bottom: 0;
   overflow: hidden;
+  animation: portrait-rise 1.1s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes portrait-rise {
+  from {
+    opacity: 0;
+    transform: translateY(110px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 .me svg,
 .me img {
@@ -187,8 +198,8 @@ nav .links a:hover {
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: top;
+  object-fit: contain;
+  object-position: bottom;
 }
 .me .tag {
   position: absolute;
@@ -450,6 +461,69 @@ h2 {
   gap: 14px;
   margin-top: 40px;
 }
+.certificate-summary {
+  margin-top: 24px;
+  max-width: 520px;
+}
+.certificate-link {
+  margin-top: 28px;
+}
+.certificate-link span {
+  margin-left: 8px;
+}
+.certificate-link a {
+  text-decoration: none;
+}
+.certificate-link a:hover {
+  text-decoration: underline;
+}
+.certificates-page {
+  min-height: calc(100vh - 100px);
+  padding-top: 90px;
+  padding-bottom: 110px;
+}
+.certificates-page h1 {
+  max-width: 720px;
+  font-size: clamp(42px, 7vw, 84px);
+  line-height: 1;
+  letter-spacing: -0.045em;
+  margin: 0;
+}
+.certificates-intro {
+  max-width: 560px;
+  margin-top: 24px;
+  font-size: 18px;
+}
+.back-link {
+  display: inline-block;
+  margin-bottom: 72px;
+  color: var(--blue2);
+  font-size: 14px;
+  font-weight: 600;
+}
+.back-link:hover {
+  color: var(--text);
+}
+.certificate-empty {
+  margin-top: 48px;
+  border: 1px dashed #34405a;
+  border-radius: 18px;
+  padding: 22px;
+  color: var(--mute);
+}
+.certificate-empty code {
+  color: var(--blue2);
+}
+.certificate-group {
+  padding-top: 72px;
+}
+.certificate-group h2 {
+  font-size: clamp(28px, 4vw, 42px);
+  margin-bottom: 24px;
+}
+.certificate-group .certificates {
+  margin-top: 0;
+}
 .certificate-card {
   overflow: hidden;
   background: var(--panel);
@@ -497,11 +571,39 @@ h2 {
 }
 .social {
   display: flex;
-  gap: 22px;
+  gap: 12px;
   justify-content: center;
   margin-top: 22px;
   color: #cfe0ff;
   font-size: 14px;
+}
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 11px;
+  border: 1px solid rgba(207, 224, 255, 0.22);
+  border-radius: 999px;
+  transition:
+    color 160ms ease,
+    border-color 160ms ease,
+    background 160ms ease;
+}
+.social-link > span:first-child {
+  display: grid;
+  width: 22px;
+  height: 22px;
+  place-items: center;
+  border-radius: 50%;
+  background: #cfe0ff;
+  color: #07102b;
+  font-size: 11px;
+  font-weight: 800;
+}
+.social-link:hover {
+  border-color: var(--blue2);
+  background: rgba(89, 160, 255, 0.12);
+  color: #fff;
 }
 footer {
   text-align: center;
@@ -576,6 +678,12 @@ footer {
     padding: 48px 20px;
     border-radius: 26px;
   }
+  .cta .pill {
+    max-width: 100%;
+  }
+  .social {
+    flex-wrap: wrap;
+  }
 }
 
 @media (max-width: 480px) {
@@ -586,6 +694,10 @@ footer {
 
   nav .logo {
     font-size: 16px;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .pill {
@@ -613,8 +725,8 @@ footer {
   }
 
   .me {
-    width: min(300px, 72vw);
-    height: min(440px, 105vw);
+    width: min(330px, 78vw);
+    height: min(480px, 112vw);
   }
 
   .side {
@@ -665,5 +777,51 @@ footer {
 
   .cta h2 {
     font-size: 32px;
+  }
+
+  .cta {
+    padding: 42px 16px;
+  }
+
+  .cta .pill {
+    width: 100%;
+    justify-content: center;
+    overflow-wrap: anywhere;
+    text-align: center;
+  }
+
+  .social {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    width: 100%;
+  }
+
+  .social-link {
+    justify-content: center;
+    min-width: 0;
+    padding: 8px 6px;
+  }
+
+  .social-link > span:last-child {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .certificates-page {
+    padding-top: 56px;
+    padding-bottom: 72px;
+  }
+
+  .certificates-page h1 {
+    font-size: clamp(40px, 12vw, 58px);
+  }
+
+  .certificates-intro {
+    font-size: 16px;
+  }
+
+  .back-link {
+    margin-bottom: 48px;
   }
 }

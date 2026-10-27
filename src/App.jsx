@@ -6,9 +6,20 @@ import AboutSection from "./components/sections/AboutSection.jsx";
 import ProjectsSection from "./components/sections/ProjectsSection.jsx";
 import EducationSection from "./components/sections/EducationSection.jsx";
 import CertificatesSection from "./components/sections/CertificatesSection.jsx";
+import CertificatesPage from "./components/pages/CertificatesPage.jsx";
 import ContactSection from "./components/sections/ContactSection.jsx";
 
 export default function App() {
+  if (window.location.pathname === "/certificates") {
+    return (
+      <>
+        <Navigation />
+        <CertificatesPage />
+        <Footer />
+      </>
+    );
+  }
+
   return (
     <>
       <Navigation />
